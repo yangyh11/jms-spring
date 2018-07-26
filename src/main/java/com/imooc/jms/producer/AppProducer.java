@@ -11,5 +11,7 @@ public class AppProducer {
         for (int i = 0; i < 100; i++) {
             service.sendMessage("test" + i);
         }
+//        发送完后自动关闭资源
+        ((ClassPathXmlApplicationContext) context).close();
     }
 }
